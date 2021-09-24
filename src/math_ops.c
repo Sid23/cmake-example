@@ -1,4 +1,5 @@
 #include "math_ops.h"
+#include "adder.h"
 
 #include <stdlib.h>
 #include <math.h>
@@ -23,7 +24,7 @@ static float fn1(float a, float b)
 
 int sum(int a, int b)
 {
-    return a + b;
+    return adder_func(a, b);
 }
 
 double square_root(double n)

@@ -8,7 +8,7 @@ int main(void)
     float (*fn)(float, float);
 
     printf("Testing library version: %s\n", get_version());
-    a = 2; b = 3; n = 18;
+    a = 2; b = 3; n = 19;
     printf("a = %d; b = %d;\n", a, b);
 
     swap(&a, &b);
@@ -22,6 +22,5 @@ int main(void)
     printf("[magic(%d)]: %f\n", n, (*fn)(2.0, 3.0));
 
     printf("Good Bye !!\n");
-
     return 0;
 }
