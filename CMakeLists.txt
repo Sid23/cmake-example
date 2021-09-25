@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.18)
 
 # Set the project name, language and version
-project(math_ops LANGUAGES C VERSION 1.0.0)
+project(math_ops VERSION 1.0.0)
 
 # Add library sources
 ADD_SUBDIRECTORY(src)
@@ -16,3 +16,8 @@ add_executable(${BINARY_OUTPUT} main.c)
 # Specify the link to the target library
 target_link_libraries(${BINARY_OUTPUT} PRIVATE ${PROJECT_NAME})
 
+##
+### Test definitions ###
+##
+enable_testing()
+add_subdirectory(test)

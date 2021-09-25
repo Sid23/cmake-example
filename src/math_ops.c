@@ -42,10 +42,9 @@ void swap(int *a, int *b)
     {
         return;
     }
-    int c;
-    c = *a ^ *b;
-    *a ^= c;
-    *b ^= c;
+    *a ^= *b;
+    *b ^= *a;
+    *a ^= *b;
     return;
 }
 
@@ -64,8 +63,12 @@ float (*magic(int n))(float, float)
     return &fn1;
 }
 
-/* Version is a definition passed to the compiler */
+/* Version is a definition passed to the compiler, it is the cmake project version */
 const char *get_version()
 {
-    return VERSION;
+    #ifdef VERSION
+        return VERSION;
+    #else
+        return "---";
+    #endif
 }
